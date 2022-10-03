@@ -1,0 +1,39 @@
+﻿@page
+@model TODO_App.Pages.TaskListModel
+@{
+}
+
+<div class="container w-75">
+    <form method="post">
+        <table class="w-100">
+            <tr>
+                <th>Task name</th>
+                <th>Description</th>
+                <th>Task State</th>
+            </tr>
+            @for (int i = 0; i < Model.TaskList.Count; i++)
+            {
+                var t = Model.TaskList[i];
+                <tr>
+                    <td>
+                        @t.Name
+                    </td>
+                    <td>
+                        @t.Description
+                    </td>
+                    <td>
+                        @Data.TaskStateStringGetter.GetString(t.State)
+                    </td>
+                    <td>
+                        <button asp-route-id="@t.Id" asp-page-handler="Edit"> Edit </button>
+                    </td>
+                    <td>
+                        <button asp-page-handler="Remove" asp-route-id="@t.Id">Remove</button>
+                    </td>
+                </tr>
+            }
+        </table>
+    </form>
+
+    
+</div>

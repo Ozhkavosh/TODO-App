@@ -1,0 +1,14 @@
+﻿@page
+@model TODO_App.Pages.TaskAddModel
+@{
+    var task = Model.Task;
+}
+
+<div>
+    <form method="post">
+        <input asp-for="@task.Name" type="text" />
+        <input asp-for="@task.Description" type="text" />
+        <select asp-for="@task.State" asp-items="@Model.SelectListItems"></select>
+        <input type="submit" />
+    </form>
+</div>

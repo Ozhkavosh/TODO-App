@@ -1,0 +1,42 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+th {
+    font-size: 18px;
+    padding: 10px;
+    background: #555;
+    color: #fff;
+}
+
+td {
+    background: #eee;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.2s ease;
+    color: #3f75c5;
+}
+a:hover {
+    opacity: 0.7;
+}
+
+p {
+    font-style: italic;
+}
